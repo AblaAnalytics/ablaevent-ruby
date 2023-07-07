@@ -4,7 +4,7 @@ class PostHog
     MAX_HASH_SIZE = 50_000
 
     module Request
-      HOST = 'app.posthog.com'
+      HOST = 'e.abla.io'
       PORT = 443
       PATH = '/batch/'
       SSL = true

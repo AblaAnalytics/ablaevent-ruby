@@ -20,12 +20,12 @@ class PostHog
     # @option opts [Bool] :test_mode +true+ if messages should remain
     #   queued for testing. Defaults to +false+.
     # @option opts [Proc] :on_error Handles error calls from the API.
-    # @option opts [String] :host Fully qualified hostname of the PostHog server. Defaults to `https://app.posthog.com`
+    # @option opts [String] :host Fully qualified hostname of the PostHog server. Defaults to `https://e.abla.io`
     # @option opts [Integer] :feature_flags_polling_interval How often to poll for feature flag definition changes. Measured in seconds, defaults to 30.
     def initialize(opts = {})
       symbolize_keys!(opts)
 
-      opts[:host] ||= 'https://app.posthog.com'
+      opts[:host] ||= 'https://e.abla.io'
 
       @queue = Queue.new
       @api_key = opts[:api_key]

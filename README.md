@@ -1,4 +1,4 @@
-# PostHog Ruby
+# Ablaevent Ruby
 
 Please see the main [PostHog docs](https://posthog.com/docs).
 
@@ -12,8 +12,8 @@ Specifically, the [Ruby integration](https://posthog.com/docs/integrations/ruby-
 
 ## Running example file
 
-1. Build the `posthog-ruby` gem by calling: `gem build posthog-ruby.gemspec`.
-2. Install the gem locally: `gem install ./posthog-ruby-<version>.gem`
+1. Build the `ablaevent-ruby` gem by calling: `gem build ablaevent-ruby.gemspec`.
+2. Install the gem locally: `gem install ./ablaevent-ruby-<version>.gem`
 3. Run `ruby example.rb`
 
 ## Testing
@@ -38,8 +38,8 @@ git push && git push --tags
 3. Run
 
 ```shell
-gem build posthog-ruby.gemspec
-gem push posthog-ruby-1.2.3.gem
+gem build ablaevent-ruby.gemspec
+gem push ablaevent-ruby-1.2.3.gem
 ```
 
 3. Authenticate with your RubyGems account and approve the publish!

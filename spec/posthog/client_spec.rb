@@ -2,7 +2,7 @@ require 'spec_helper'
 
 class PostHog
 
-  decide_endpoint = 'https://app.posthog.com/decide/?v=3'
+  decide_endpoint = 'https://e.abla.io/decide/?v=3'
 
   RSpec::Support::ObjectFormatter.default_instance.max_formatted_output_length = nil
 
@@ -23,7 +23,7 @@ class PostHog
       end
 
       it 'handles skip_ssl_verification' do
-        expect(PostHog::Transport).to receive(:new).with({api_host: 'https://app.posthog.com', skip_ssl_verification: true})
+        expect(PostHog::Transport).to receive(:new).with({api_host: 'https://e.abla.io', skip_ssl_verification: true})
         expect { Client.new api_key: API_KEY, skip_ssl_verification: true }.to_not raise_error
       end
     end
@@ -120,7 +120,7 @@ class PostHog
 
         stub_request(
           :get,
-          'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+          'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
         ).to_return(status: 200, body: api_feature_flag_res.to_json)
         stub_request(:post, decide_endpoint)
           .to_return(status: 200, body: decide_res.to_json)
@@ -142,7 +142,7 @@ class PostHog
         decide_res = {"featureFlags": {"beta-feature": "random-variant", "alpha-feature": true, "off-feature": false}}
         stub_request(
           :get,
-          'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+          'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
         ).to_return(status: 200, body: {}.to_json)
         stub_request(:post, decide_endpoint)
           .to_return(status: 200, body: decide_res.to_json)
@@ -167,7 +167,7 @@ class PostHog
 
         stub_request(
           :get,
-          'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+          'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
         ).to_return(status: 401, body: {"error": "not authorized"}.to_json)
         stub_request(:post, decide_endpoint)
           .to_return(status: 200, body: decide_res.to_json)
@@ -184,7 +184,7 @@ class PostHog
         expect(properties["$feature/beta-feature"]).to eq("random-variant")
         expect(properties["$active_feature_flags"]).to eq(["beta-feature"])
 
-        assert_not_requested :get, 'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+        assert_not_requested :get, 'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
       end
 
       it 'manages memory well when sending feature flags' do
@@ -208,7 +208,7 @@ class PostHog
         }
         stub_request(
           :get,
-          'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+          'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
         ).to_return(status: 200, body: api_feature_flag_res.to_json)
 
         stub_const("PostHog::Defaults::MAX_HASH_SIZE", 10)
@@ -262,7 +262,7 @@ class PostHog
         
         stub_request(
           :get,
-          'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+          'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
         ).to_return(status: 200, body: api_feature_flag_res.to_json)
 
         stub_const("PostHog::Defaults::MAX_HASH_SIZE", 10)
@@ -327,12 +327,12 @@ class PostHog
             event: "test_event",
             groups: {
               "company": "id:5",
-              "instance": "app.posthog.com"
+              "instance": "e.abla.io"
             }
           }
         )
         properties = client.dequeue_last_message[:properties]
-        expect(properties["$groups"]).to eq({"company": "id:5", "instance": "app.posthog.com"})
+        expect(properties["$groups"]).to eq({"company": "id:5", "instance": "e.abla.io"})
       end
     end
 
@@ -532,7 +532,7 @@ class PostHog
         # Mock response for api/feature_flag
         stub_request(
           :get,
-          'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+          'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
         ).to_return(status: 200, body: api_feature_flag_res.to_json)
 
         # Mock response for decide

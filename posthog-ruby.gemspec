@@ -1,7 +1,7 @@
 require File.expand_path('../lib/posthog/version', __FILE__)
 
 Gem::Specification.new do |spec|
-  spec.name = 'posthog-ruby'
+  spec.name = 'ablaevent-ruby'
   spec.version = PostHog::VERSION
   spec.files = Dir.glob('{lib,bin}/**/*')
   spec.require_paths = ['lib']
@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.description = 'The PostHog ruby library'
   spec.authors = ['']
   spec.email = 'hey@posthog.com'
-  spec.homepage = 'https://github.com/PostHog/posthog-ruby'
+  spec.homepage = 'https://github.com/AblaAnalytics/ablaevent-ruby'
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 2.0'
   

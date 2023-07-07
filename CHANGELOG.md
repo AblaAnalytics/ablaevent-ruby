@@ -30,19 +30,19 @@ New Changes:
 
 # 1.3.0 - 2022-06-24
 
-- Add support for running the client in "No-op" mode for testing (https://github.com/PostHog/posthog-ruby/pull/15)
+- Add support for running the client in "No-op" mode for testing (https://github.com/AblaAnalytics/ablaevent-ruby/pull/15)
 
 # 1.2.4 - 2022-05-30
 
-- Fix `create_alias` call (https://github.com/PostHog/posthog-ruby/pull/14)
+- Fix `create_alias` call (https://github.com/AblaAnalytics/ablaevent-ruby/pull/14)
 
 # 1.2.3 - 2022-01-18
 
-- Fix `present?` call (https://github.com/PostHog/posthog-ruby/pull/12)
+- Fix `present?` call (https://github.com/AblaAnalytics/ablaevent-ruby/pull/12)
 
 # 1.2.2 - 2021-11-22
 
-- Add ability to disable SSL verification by passing `skip_ssl_verification` (https://github.com/PostHog/posthog-ruby/pull/11)
+- Add ability to disable SSL verification by passing `skip_ssl_verification` (https://github.com/AblaAnalytics/ablaevent-ruby/pull/11)
 
 # 1.2.1 - 2021-11-19
 
@@ -50,4 +50,4 @@ New Changes:
 
 # 1.1.0 - 2020-12-15
 
-- Change default domain from `t.posthog.com` to `app.posthog.com`
+- Change default domain from `t.posthog.com` to `e.abla.io`

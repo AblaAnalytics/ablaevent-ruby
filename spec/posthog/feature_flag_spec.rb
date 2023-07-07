@@ -5,7 +5,7 @@ class PostHog
 
   RSpec::Support::ObjectFormatter.default_instance.max_formatted_output_length = nil
 
-  decide_endpoint = 'https://app.posthog.com/decide/?v=3'
+  decide_endpoint = 'https://e.abla.io/decide/?v=3'
 
   describe 'local evaluation' do
   
@@ -37,7 +37,7 @@ class PostHog
       }
       stub_request(
         :get,
-        'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+        'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
       ).to_return(status: 200, body: api_feature_flag_res.to_json)
 
       # shouldn't call decide
@@ -84,7 +84,7 @@ class PostHog
       }
       stub_request(
         :get,
-        'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+        'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
       ).to_return(status: 200, body: api_feature_flag_res.to_json)
 
       # shouldn't call decide
@@ -143,7 +143,7 @@ class PostHog
       }
       stub_request(
         :get,
-        'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+        'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
       ).to_return(status: 200, body: api_feature_flag_res.to_json)
 
       stub_request(:post, decide_endpoint)
@@ -212,7 +212,7 @@ class PostHog
       }
       stub_request(
         :get,
-        'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+        'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
       ).to_return(status: 200, body: api_feature_flag_res.to_json)
 
       stub_request(:post, decide_endpoint)
@@ -298,7 +298,7 @@ class PostHog
       }
       stub_request(
         :get,
-        'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+        'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
       ).to_return(status: 200, body: api_feature_flag_res.to_json)
 
       stub_request(:post, decide_endpoint)
@@ -360,7 +360,7 @@ class PostHog
       }
       stub_request(
         :get,
-        'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+        'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
       ).to_return(status: 200, body: api_feature_flag_res.to_json)
 
       stub_request(:post, decide_endpoint)
@@ -404,7 +404,7 @@ class PostHog
       }
       stub_request(
         :get,
-        'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+        'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
       ).to_return(status: 200, body: api_feature_flag_res.to_json)
 
       stub_request(:post, decide_endpoint)
@@ -446,7 +446,7 @@ class PostHog
       }
       stub_request(
         :get,
-        'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+        'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
       ).to_return(status: 200, body: api_feature_flag_res.to_json)
 
       stub_request(:post, decide_endpoint)
@@ -484,7 +484,7 @@ class PostHog
       }
       stub_request(
         :get,
-        'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+        'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
       ).to_return(status: 200, body: api_feature_flag_res.to_json)
 
       stub_request(:post, decide_endpoint)
@@ -550,7 +550,7 @@ class PostHog
       }
       stub_request(
         :get,
-        'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+        'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
       ).to_return(status: 200, body: api_feature_flag_res.to_json)
 
       stub_request(:post, decide_endpoint)
@@ -618,7 +618,7 @@ class PostHog
       }
       stub_request(
         :get,
-        'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+        'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
       ).to_return(status: 200, body: api_feature_flag_res.to_json)
 
       stub_request(:post, decide_endpoint)
@@ -638,7 +638,7 @@ class PostHog
       }
       stub_request(
         :get,
-        'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+        'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
       ).to_return(status: 200, body: api_feature_flag_res.to_json)
 
       stub_request(:post, decide_endpoint)
@@ -690,7 +690,7 @@ class PostHog
       }
       stub_request(
         :get,
-        'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+        'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
       ).to_return(status: 200, body: api_feature_flag_res.to_json)
 
       stub_request(:post, decide_endpoint)
@@ -741,7 +741,7 @@ class PostHog
       }
       stub_request(
         :get,
-        'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+        'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
       ).to_return(status: 200, body: api_feature_flag_res.to_json)
 
       stub_request(:post, decide_endpoint)
@@ -790,7 +790,7 @@ class PostHog
       }
       stub_request(
         :get,
-        'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+        'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
       ).to_return(status: 200, body: api_feature_flag_res_updated.to_json)
 
       # force reload to simulate poll interval
@@ -836,7 +836,7 @@ class PostHog
       }
       stub_request(
         :get,
-        'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+        'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
       ).to_return(status: 200, body: api_feature_flag_res.to_json)
 
       stub_request(:post, decide_endpoint)
@@ -891,7 +891,7 @@ class PostHog
       }
       stub_request(
         :get,
-        'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+        'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
       ).to_return(status: 200, body: api_feature_flag_res.to_json)
 
       stub_request(:post, decide_endpoint)
@@ -938,7 +938,7 @@ class PostHog
       }
       stub_request(
         :get,
-        'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+        'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
       ).to_return(status: 200, body: api_feature_flag_res.to_json)
 
       stub_request(:post, decide_endpoint)
@@ -989,7 +989,7 @@ class PostHog
       }
       stub_request(
         :get,
-        'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+        'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
       ).to_return(status: 200, body: api_feature_flag_res.to_json)
 
       stub_request(:post, decide_endpoint)
@@ -1247,7 +1247,7 @@ class PostHog
 
       stub_request(
         :get,
-        'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+        'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
       ).to_return(status: 200, body: api_feature_flag_res.to_json)
 
       # shouldn't call decide
@@ -2298,7 +2298,7 @@ class PostHog
 
       stub_request(
         :get,
-        'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+        'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
       ).to_return(status: 200, body: api_feature_flag_res.to_json)
 
       # shouldn't call decide
@@ -3386,7 +3386,7 @@ class PostHog
 
       stub_request(
         :get,
-        'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+        'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
       ).to_return(status: 200, body: {"flags": flag_res}.to_json)
 
       stub_request(:post, decide_endpoint)
@@ -3403,7 +3403,7 @@ class PostHog
     it 'get all flags and payloads with fallback and empty local flags' do
       stub_request(
         :get,
-        'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+        'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
       ).to_return(status: 200, body: {"flags": []}.to_json)
 
       stub_request(:post, decide_endpoint)
@@ -3479,7 +3479,7 @@ class PostHog
 
       stub_request(
         :get,
-        'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+        'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
       ).to_return(status: 200, body: {"flags": flag_res}.to_json)
 
       stub_request(:post, decide_endpoint)
@@ -3532,7 +3532,7 @@ class PostHog
         }
         stub_request(
           :get,
-          'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+          'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
         ).to_return(status: 200, body: {"flags": [basic_flag, disabled_flag]}.to_json)
   
         stub_request(:post, decide_endpoint)
@@ -3572,7 +3572,7 @@ class PostHog
       }
       stub_request(
         :get,
-        'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+        'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
       ).to_return(status: 200, body: {"flags": [basic_flag_res]}.to_json)
 
       stub_request(:post, decide_endpoint)
@@ -3587,7 +3587,7 @@ class PostHog
     it 'evaluates boolean feature flags with decide' do
       stub_request(
         :get,
-        'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+        'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
       ).to_return(status: 200, body: {"flags": []}.to_json)
       stub_request(:post, decide_endpoint)
         .to_return(status: 200, body:{"featureFlagPayloads": {"person-flag" => 300}}.to_json)
@@ -3629,7 +3629,7 @@ class PostHog
 
         stub_request(
           :get,
-          'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+          'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
         ).to_return(status: 200, body: {"flags": [multivariate_flag]}.to_json)
         stub_request(:post, decide_endpoint)
         .to_return(status: 200, body:{"featureFlagPayloads": {"first-variant": {"b": "json"}}}.to_json)
@@ -3674,7 +3674,7 @@ class PostHog
 
       stub_request(
         :get,
-        'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+        'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
       ).to_return(status: 200, body: api_feature_flag_res.to_json)
 
       stub_request(:post, decide_endpoint)
@@ -3686,7 +3686,7 @@ class PostHog
 
       stub_request(
         :get,
-        'https://app.posthog.com/api/feature_flag/local_evaluation?token=testsecret'
+        'https://e.abla.io/api/feature_flag/local_evaluation?token=testsecret'
       ).to_return(status: 400, body: {"error": "went_wrong!"}.to_json)
 
       # force reload to simulate poll interval
