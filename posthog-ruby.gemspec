@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.bindir = 'bin'
   spec.executables = ['posthog']
   spec.summary = 'PostHog library'
-  spec.description = 'The PostHog ruby library'
+  spec.description = 'The Ablaevent ruby library'
   spec.authors = ['']
   spec.email = 'hey@posthog.com'
   spec.homepage = 'https://github.com/AblaAnalytics/ablaevent-ruby'
