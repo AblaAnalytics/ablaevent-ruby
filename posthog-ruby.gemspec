@@ -2,7 +2,7 @@ require File.expand_path('../lib/posthog/version', __FILE__)
 
 Gem::Specification.new do |spec|
   spec.name = 'ablaevent-ruby'
-  spec.version = PostHog::VERSION
+  spec.version = "2.3.6"
   spec.files = Dir.glob('{lib,bin}/**/*')
   spec.require_paths = ['lib']
   spec.bindir = 'bin'
